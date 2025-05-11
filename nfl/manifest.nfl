@@ -1,0 +1,17 @@
+@file_manifest
+@file: nfl/manifest.nfl
+@type:  @node_definition
+@allow_child: true
+@created: 2025-05-11T16:35:00Z
+@description: "Self-defining node for ENF spec, containing other @nodes"
+
+@nodes:
+
+- `@agent/corelot.js`     # copy_brief, marketing, SEO
+- `@agent/jitdev.js`      # code rendering, GIT
+- `@agent/schemaops.js`   # schema org validation
+- `@cli/index.js`      # command-line test runner
+- `@runtime/executor.js` # executes nodes in order
+
+
+@end
