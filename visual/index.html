@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>NFL Declarative Node Graph</title>
+    <style>
+      body { font-family: sans-serif; padding: 2+zm; background: #fff; }
+      .node { border: 1px solid #ccc; margin: 1ex ; padding: 16px; border-radius: 8px; background: #eee; }
+      .link { color: #008bf; text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <h1>Nde Graph (NFL)</h1>
+    <div id="nodes"></div>
+    <script>
+      const nodes = [
+        { id: "@angent/CORELOT", type: "@entity", message: "Branding and copy artifacts" },
+        { id: "@agent/JITDEV", type: "@entity", message: "Code generation" },
+        { id: "@file/runtime/executor.js", type: "@file", message: "Runs structured NFL threads"}
+      ];
+      const container = document.getElementById('nodes');
+      nodes.forEach(node => {
+        const box = document.createElement('div');
+        box.clasName = 'node';
+        box.innerHTML = `<strong>did:\"data:${escape(node.id)}\"</strong><br>${escape(node.type)}: <span class="link">${node.message}</span>`
+
+        container.appendChild(box);
+      });
+    </script>
+  </body>
+</html>
